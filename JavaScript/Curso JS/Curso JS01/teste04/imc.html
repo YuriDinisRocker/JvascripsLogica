@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc</title>
+</head>
+
+
+<style>
+
+
+
+
+
+
+
+</style>
+
+<body>
+  
+    
+
+
+
+
+
+
+
+<script>
+
+
+var pesoYuri= 56;
+var alturaYuri= 1.76;
+var imcYuri= pesoYuri/ (alturaYuri*alturaYuri);
+
+function escrever(frase) {
+    document.write(frase)
+
+
+
+}
+
+function mostrarImc(peso, altura) {
+    var calcularImc = peso/ (altura*altura)
+    return calcularImc
+    
+
+
+
+}
+
+
+
+
+
+ 
+
+
+while (isNaN(pesoSeu && alturaSua)) {
+
+var pesoSeu = window.prompt(`me diga seu peso: `);
+var alturaSua = window.prompt(`me diga sua altura: `);
+
+if (isNaN(pesoSeu && alturaSua)) {
+    window.alert(`Digite apenas números`)
+}  
+}
+
+ var mandarImc = mostrarImc(pesoSeu, alturaSua);
+ 
+ escrever(`seu imc é: ${mandarImc} e arredondando é: ${Math.round(mandarImc)}`)
+
+ if(mandarImc>35) {
+    escrever(`<br>`)
+    escrever(`Você está acima do recomendado`)
+
+
+ }
+
+if(mandarImc<18) {
+    escrever(`<br>`)
+    escrever(`Você está abaixo do recomendado`)
+
+
+}
+
+if(mandarImc>=18 && mandarImc<=35) {
+    escrever(`<br>`)
+    escrever(`Você está excelente`)
+
+
+}
+
+ 
+
+////////////////////////////////////////////////////////////////////////////////////
+//frase=`o imc de Yuri é: ${imcYuri} ou arredondado (${Math.round(imcYuri)})`
+   
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<canvas width="600" height="400" ></canvas>
+    
+
+<script>
+
+var coral= [`blue`, `red`, `green`];
+var contadorCor= 0;
+var quadro= document.querySelector(`canvas`);
+var pincel= quadro.getContext(`2d`);
+
+
+pincel.fillStyle=`grey`
+pincel.fillRect(0, 0, 600, 400)
+
+
+
+
+function exibir(evento) {
+
+    var x= evento.pageX-quadro.offsetLeft   //NESSE CASO O ONCLICK VIROU O PARÂMETRO, ENTÃO QUANDO EVENT.PAGX SIGNIFICA 
+                        //QUE O EVENT É O ONCLICK E QUANDO ELE ONCLICK ELE PEGARÁ O VALOR DO X, ASSIM DANDO A CORDENADA
+    var y= evento.pageY-quadro.offsetTop
+
+    pincel.fillStyle= coral[contadorCor];//criei um array com 3 cores e um contador de 0, quando esse contador sobe a cor muda tbm
+    pincel.beginPath();
+    pincel.arc(x, y, 10, 0, 2 * 3.14);
+    pincel.fill();
+    console.log(`${x}, ${y}`)
+}
+
+quadro.onclick= exibir;
+
+function mudaCor() {
+//toda vez que eu chamar essa função a cor do array ira mudar
+    
+    contadorCor++
+
+    if(contadorCor>=coral.length){
+        contadorCor=0  
+//se a contagem passar do numero total de cores a cor inical volta
+
+    }
+
+return false//para não aparecer as opções chatas ao clicar com o botão direito do mouse sobre a tela
+}
+
+quadro.oncontextmenu = mudaCor;//mudar quando clicar com o botão direito do mouse
+                               //oncontextmenu é o clique do botão direito do mouse
+</script>
+
+
+
+
+
+</body>
+</html>

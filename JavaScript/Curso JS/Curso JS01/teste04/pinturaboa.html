@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+<canvas width="600" height="400" ></canvas>
+    
+
+<script>
+
+function quadrado(x, y, cor){
+    var quadro= document.querySelector(`canvas`);
+    var pincel= quadro.getContext(`2d`);
+
+    pincel.fillStyle= cor;
+    pincel.fillRect(x, y, 50, 50);
+    pincel.strokeStyle=`black`;
+    pincel.strokeRect(x, y, 50, 50);
+}
+var escalaX=0
+var escalaY=0
+while(escalaX<600){
+    quadrado(escalaX, 0, `green`)
+    quadrado(escalaX, 50, `blue`)
+    quadrado(escalaX, 100, `red`)
+    escalaX= escalaX+50
+    
+
+
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>

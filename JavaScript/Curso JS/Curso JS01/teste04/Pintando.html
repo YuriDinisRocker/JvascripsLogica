@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+<canvas width="1200" height='720'></canvas> <!--canvas é como se fosse o quadro em branco, por esse motivo colocamos a altura e largura-->
+<!--width significa altura (X) e height significa largura (Y) --> 
+
+
+<script>
+
+var quadro= document.querySelector(`canvas`);
+var pincel= quadro.getContext(`2d`);//getcontext significa obter contexto da pintura(pincel em dimensão, então:2d,3d...);
+
+pincel.fillStyle=`white`;//fill significa preenchimento e style é estilo, então é o estilo do preenchimento do quadro, nesse caso a cor;
+pincel.fillRect(0, 0, 1200, 720); //fill rect significa aonde vai começar o preenchimento, então eixo X, eixo Y, altura e largura.;
+
+pincel.fillStyle=`green`;
+pincel.fillRect(0, 0, 400, 720);//(eixo x, eixo y, altura, largura);
+
+pincel.fillStyle= `red`;
+pincel.fillRect(800, 0, 400, 720);//(eixo x, eixo y, altura, largura);
+
+
+pincel.fillStyle=`yellow`;
+pincel.beginPath();//Toda vez que começar um desenho usar esse código;
+pincel.moveTo(600, 360);//(eixo x, eixo y);
+pincel.lineTo(400, 720);//(eixo x, eixo y);
+pincel.lineTo(800, 720);//(eixo x, eixo y);
+pincel.fill();//comando para preencher as cordenadar que você passou acima;
+
+pincel.fillStyle=`blue`;
+pincel.beginPath();
+pincel.arc(600, 360, 50, 0, 2 * 3.14)
+pincel.fill();
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

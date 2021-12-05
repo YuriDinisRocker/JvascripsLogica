@@ -1,0 +1,51 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);//Math.PI significa 3.14(número de pi)
+        pincel.fill();
+    }
+
+   function limpaTela(){
+
+    pincel.clearRect(0, 0, 600, 400);
+
+   }
+   
+var x = 20   
+var sentido=1
+   
+    function AnimaçãoCirculo() {
+        
+        if(x>600){
+            sentido= -1
+        } 
+        
+        if(x<0) {
+          sentido=sentido+1  
+        }
+
+        limpaTela();
+            desenhaCirculo(x, 20, 10);
+            x= x+sentido
+
+     }
+
+     
+setInterval(AnimaçãoCirculo, 5) //setInterval significa setar um intervalo, coloca a função e de quanto em quanto tempo ela se repitira(obs: valor esta em milisegundos)
+    
+
+
+
+
+
+</script>

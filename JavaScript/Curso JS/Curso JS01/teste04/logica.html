@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logica</title>
+</head>
+<body>
+  
+    
+<h3>Álcool ou Gasolina?</h3>
+
+
+<script>
+
+function pularLinha() {
+   
+    document.write(`<br>`) //isso que acabei de crir é uma função(function) que serve para nos simplificarmos e entendermos muito melhor as comandos.
+                            //nunca esquecer de por "()" para o comando pegar.
+};
+
+function escrever(frase) {
+//tenho que colocar uma palavra dentro do parenteses para ele identificar e trocar por aquilo que quero escrever ex: frase=`qual é o consumo de gasolina? o consumo de gasolina é ${Math.round(distanciacomgasosa/tanque)}`
+    document.write(frase)
+    pularLinha()
+};
+
+
+var tanque = 40 //litros
+
+var distanciacomgasosa = 480 //km
+
+var distanciaAlcool = 300 //km
+
+window.alert(`o tanque possui ${tanque} litros`);
+
+var nome = window.prompt(`me diga seu nome:`);
+
+window.confirm(`seu nome tem ${nome.length} letras!!!`)
+
+escrever(`qual é o consumo de gasolina? o consumo de gasolina é ${Math.round(distanciacomgasosa/tanque)}`)
+//OU document.write(`qual é o consumo de gasolina? o consumo de gasolina é ` + Math.round(distanciacomgasosa/tanque))
+
+
+document.write(`e qual o consumo com o álcool? O consumo com o álcool é ${distanciaAlcool/tanque}`)
+</script>
+
+
+
+</body>
+</html>

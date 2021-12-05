@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<canvas width="600" height="400"></canvas>    
+
+<script>
+
+var quadro=document.querySelector(`canvas`);
+var pincel= quadro.getContext(`2d`);
+
+pincel.fillStyle=`darkgreen`;
+pincel.fillRect(0, 0, 350, 300);
+
+pincel.fillStyle=`black`;
+pincel.fillRect(50, 50, 90, 90);
+
+pincel.fillStyle=`black`;
+pincel.fillRect(200, 50, 90, 90);
+
+pincel.fillStyle=`black`;
+pincel.fillRect(135, 150, 70, 100);
+
+pincel.fillStyle=`black`
+pincel.fillRect(90, 180, 50, 110)
+
+pincel.fillStyle=`black`
+pincel.fillRect(200, 180, 50, 110)
+
+
+
+
+</script>
+
+
+</body>
+</html>

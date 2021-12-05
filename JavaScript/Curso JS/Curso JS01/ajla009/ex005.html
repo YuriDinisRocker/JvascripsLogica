@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiros passos com DOM</title> 
+
+ <style>
+
+ body{background-color: indigo;
+
+ color: white;
+
+ font: normal 30pt impact;}
+
+ body p{font: normal 30pt arial;}
+
+ body div{font: normal 80pt arial;}
+
+
+ </style>
+
+
+ </head>
+
+
+ <body>
+ <h1>iniciando estudos com DOM</h1> 
+ <p id="p1">aqui vai o resultado</p1>
+ <p class="oi">aprendendo a usar <strong>DOM</strong> em <strong>JavaScript</strong></p2>
+ <div id="msg"><strong>clique em mim</strong> </div>
+ <p></p>
+ 
+ 
+ <script>
+
+ var titulo=document.getElementsByTagName(`h1`)[0];
+ document.write(`esta escrito no titulo: ${titulo.innerText}`);
+ titulo.style.backgroundColor=`blue`;
+
+ document.write("<br>");
+ document.write("<br>");
+
+ var h=document.getElementById(`p1`);
+ document.write(`se estiver funcionando estará escrito ${h.innerText}`);
+
+ document.write("<br>");
+ document.write("<br>");
+
+ var d = window.document.getElementById(`msg`);
+ document.write(`na mensagem esta com o recado ${d.innerText}`);
+ d.style.color=`black`;
+
+
+ document.write("<br>");
+ document.write("<br>");
+
+
+ var y=document.getElementsByClassName(`oi`)[0]
+ document.write(`vamos ver se esta pegando: ${y.innerHTML}`)
+
+ document.write("<br>")
+
+ var conf= prompt(`qual seu primeiro nome?  `);
+ var safe= prompt(`qual seu segundo nome?  `);
+ alert(`bem vindo ${conf} ${safe}, seja bem vindo`);
+
+</script>
+
+
+
+ </body>
+ </html>

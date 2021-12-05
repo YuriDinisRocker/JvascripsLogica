@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futebol</title>
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+ 
+    
+
+
+
+<script>
+
+
+
+function pulaLinha() {
+    document.write(`<br>`)
+
+
+
+
+};
+
+function escrever(frase) {
+    document.write(frase)
+    pulaLinha()
+
+
+
+};
+
+
+//caso eu queira que o resultado seja um numero realmente, sempre usar o comando parseInt(); pois ele ira transforma string em number
+
+var pontoAnoPassado = parseInt(window.prompt(`Quantos pontos seu time fez ano passado?`));
+var vitorias= parseInt(window.prompt(`me diga o total de vitórias do seu time`));
+var empates= parseInt(window.prompt(`me diga o total de empates do seu time`));
+var pontos= (vitorias*3)+empates
+
+escrever(`Seu time está com um total de: ${pontos} pontos.`)
+
+
+if(pontos>pontoAnoPassado) {
+    escrever(`<br>`)
+    escrever(`Seu time tem uma pontuação maior que ano passado.`)
+
+
+}
+
+if(pontos<pontoAnoPassado) {
+    escrever(`<br>`)
+    escrever(`Seu time tem uma pontuação menor que ano passado.`)
+
+
+}
+
+if(pontos==pontoAnoPassado) {
+    escrever(`<br>`)
+    escrever(`Seu time tem a mesma pontuação do ano passado.`)
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

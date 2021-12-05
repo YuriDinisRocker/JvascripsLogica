@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JogoAdivinha</title>
+
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+ 
+    
+
+
+
+<script>
+
+
+
+function pulaLinha() {
+    document.write(`<br>`)
+
+
+
+
+};
+
+function escrever(frase) {
+    document.write(frase)
+    pulaLinha()
+
+
+
+};
+
+var anoAtual = parseInt(prompt(`me diga o ano atual:`));
+var copaInicial = 1930
+
+while(copaInicial <= anoAtual) {
+    escrever(`Teve copa no ano de ${copaInicial}`)
+    if (copaInicial == anoAtual) {
+        escrever(`<br>`)
+        escrever(`Este ano tera uma copa`)
+
+    }
+    copaInicial= copaInicial+4
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

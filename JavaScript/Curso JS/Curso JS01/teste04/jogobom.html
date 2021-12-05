@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo</title>
+</head>
+
+
+
+
+
+
+
+<body>
+    
+<input></input>   <!--esse comando faz com que mundo html tenha uma caixa de entrada-->
+<button>Clique aqui para saber o resultado(HIPER SECRETO)</button> <!--esse comando faz com que surja um botão-->
+
+
+<script>
+var numeroSecreto= [1,2,3,4];
+var input= document.querySelector(`input`);
+var button= document.querySelector(`button`);
+input.focus();//esse comando faz com que o input tenha um foco(piscando)
+
+function verifica(){    
+ var achou=false   
+    
+    for(var posicao=0; posicao<4; posicao++ ) {
+        if(input.value==numeroSecreto[posicao]){
+        alert(`Você acertou`);
+        achou= true
+        
+    }
+    }
+
+ if(achou==false){
+    alert(`Você errou`)
+ }
+
+            input.value= ``; //esse comando fez com que o valor do input fosse vazio, assim esvaziando a cada clicar do botão
+            input.focus(); //esse comando faz com que o input tenha um foco(piscando)
+
+
+}
+
+button.onclick=verifica; //esse comando faz com que o botão ao ser clicado faça uma ação
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
